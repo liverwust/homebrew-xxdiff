@@ -5,12 +5,11 @@ class Xxdiff < Formula
   sha256 "bf58ddda9d7a887f4f5cae20070ed5f2e0d65f575af20860738c6e2742c3a000"
   license "BSD-2-Clause"
 
+  conflicts_with "xxdiff-x86_64", because: "you need to select either xxdiff-x86_64 or xxdiff-arm64, not both"
+  depends_on :arm64
   depends_on "bison" => :build
   depends_on "flex" => :build
   depends_on "qt@5"
-
-  # depends_on "cmake" => :build
-
 
   # https://github.com/macports/macports-ports/blob/master/devel/xxdiff/files/patch-qt5.diff
   # add upstream support for Qt 5
@@ -22,10 +21,7 @@ class Xxdiff < Formula
   patch :p0, :DATA
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    system "make", *std_configure_args, "--disable-silent-rules"
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
   end
 
@@ -2531,3 +2527,15 @@ diff -urb ./tools/index.html ./tools/index.html
       "If no files are specified on the command line, show a file dialog so that "
       "the user can select them. This option is ignored if any files are specified."
     },
+diff -urb ./src/Makefile.bootstrap ./src/Makefile.bootstrap
+--- ./src/Makefile.bootstrap
++++ ./src/Makefile.bootstrap
+@@ -14,7 +14,7 @@ all: Makefile
+ OS := $(shell uname -s)
+ ifeq ($(OS),Darwin)
+     # Default is an Xcode project, so force a makefile build
+-    export QMAKESPEC=macx-clang
++    export QMAKESPEC=macx-clang-arm64
+ endif
+
+ Makefile.qmake: $(MAKEDIR)/xxdiff.pro
