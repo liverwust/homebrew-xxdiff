@@ -21,24 +21,13 @@ class Xxdiff < Formula
   patch :p0, :DATA
 
   def install
-    system "make", *std_configure_args, "--disable-silent-rules"
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    Dir.chdir("src") do
+        system "make", "-f", "Makefile.bootstrap"
+        system "make"
+    end
+    bin.install "bin/xxdiff.app/Contents/MacOS/xxdiff"
+    man1.install "src/xxdiff.1"
   end
-
-  test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test xxdiff`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
-  end
-end
-
 __END__
 Only in /Users/macports/Git/Dayo/xxdiff: .hg
 Only in .: .hg_archival.txt
