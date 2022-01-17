@@ -30,8 +30,6 @@ class XxdiffArm64 < Formula
   end
 end
 __END__
-Only in /Users/macports/Git/Dayo/xxdiff: .hg
-Only in .: .hg_archival.txt
 diff -urb ./CHANGES ./CHANGES
 --- ./CHANGES	2016-05-15 15:55:57.000000000 -0700
 +++ ./CHANGES	2019-06-26 09:20:52.000000000 -0700
@@ -73,7 +71,6 @@ diff -urb ./VERSION ./VERSION
 @@ -1 +1 @@
 -4.0.1
 +4.0.1
-Only in .: dayo.diff
 diff -urb ./doc/xxdiff-integration.html ./doc/xxdiff-integration.html
 --- ./doc/xxdiff-integration.html	2016-05-15 15:55:57.000000000 -0700
 +++ ./doc/xxdiff-integration.html	2019-06-26 09:20:52.000000000 -0700
@@ -2452,7 +2449,7 @@ diff -urb ./src/xxdiff.pro ./src/xxdiff.pro
  	resources.h \
  	resources.inline.h \
  	accelUtil.h \
-Only in ./tools/git: xx-git-resolve
+
 diff -urb ./tools/index.html ./tools/index.html
 --- ./tools/index.html	2016-05-15 15:55:57.000000000 -0700
 +++ ./tools/index.html	2019-06-26 09:20:52.000000000 -0700
