@@ -1,4 +1,4 @@
-class Xxdiff < Formula
+class XxdiffArm64 < Formula
   desc "xxdiff is a graphical file and directories comparator and merge tool."
   homepage "https://furius.ca/xxdiff/"
   url "https://downloads.sourceforge.net/project/xxdiff/xxdiff/4.0.1/xxdiff-4.0.1.tar.bz2"
