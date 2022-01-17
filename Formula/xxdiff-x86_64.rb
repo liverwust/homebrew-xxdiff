@@ -1,9 +1,10 @@
-class XxdiffArm64 < Formula
+class XxdiffX8664 < Formula
   desc "xxdiff is a graphical file and directories comparator and merge tool."
   homepage "https://furius.ca/xxdiff/"
   url "https://downloads.sourceforge.net/project/xxdiff/xxdiff/4.0.1/xxdiff-4.0.1.tar.bz2"
   sha256 "bf58ddda9d7a887f4f5cae20070ed5f2e0d65f575af20860738c6e2742c3a000"
   license "BSD-2-Clause"
+  revision 1
 
   conflicts_with "xxdiff-arm64", because: "you need to select either xxdiff-x86_64 or xxdiff-arm64, not both"
   depends_on arch: :x86_64
