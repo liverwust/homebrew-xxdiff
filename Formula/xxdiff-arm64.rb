@@ -6,7 +6,7 @@ class Xxdiff < Formula
   license "BSD-2-Clause"
 
   conflicts_with "xxdiff-x86_64", because: "you need to select either xxdiff-x86_64 or xxdiff-arm64, not both"
-  depends_on :arm64
+  depends_on arch: :arm64
   depends_on "bison" => :build
   depends_on "flex" => :build
   depends_on "qt@5"
