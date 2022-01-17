@@ -1,12 +1,9 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Xxdiff < Formula
-  desc ""
-  homepage ""
+  desc "xxdiff is a graphical file and directories comparator and merge tool."
+  homepage "https://furius.ca/xxdiff/"
   url "https://downloads.sourceforge.net/project/xxdiff/xxdiff/4.0.1/xxdiff-4.0.1.tar.bz2"
   sha256 "bf58ddda9d7a887f4f5cae20070ed5f2e0d65f575af20860738c6e2742c3a000"
-  license ""
+  license "BSD-2-Clause"
 
   # depends_on "cmake" => :build
 
