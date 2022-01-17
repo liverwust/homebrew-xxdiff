@@ -28,6 +28,7 @@ class Xxdiff < Formula
     bin.install "bin/xxdiff.app/Contents/MacOS/xxdiff"
     man1.install "src/xxdiff.1"
   end
+end
 __END__
 Only in /Users/macports/Git/Dayo/xxdiff: .hg
 Only in .: .hg_archival.txt
