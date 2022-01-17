@@ -5,6 +5,10 @@ class Xxdiff < Formula
   sha256 "bf58ddda9d7a887f4f5cae20070ed5f2e0d65f575af20860738c6e2742c3a000"
   license "BSD-2-Clause"
 
+  depends_on "bison" => :build
+  depends_on "flex" => :build
+  depends_on "qt@5"
+
   # depends_on "cmake" => :build
 
   def install
