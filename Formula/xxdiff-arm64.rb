@@ -2449,7 +2449,6 @@ diff -urb ./src/xxdiff.pro ./src/xxdiff.pro
  	resources.h \
  	resources.inline.h \
  	accelUtil.h \
-
 diff -urb ./tools/index.html ./tools/index.html
 --- ./tools/index.html	2016-05-15 15:55:57.000000000 -0700
 +++ ./tools/index.html	2019-06-26 09:20:52.000000000 -0700
@@ -2469,6 +2468,7 @@ diff -urb ./tools/index.html ./tools/index.html
 +  <a href="http://furius.ca/"><img src="http://furius.ca/home/furius-logo-w.png" id="logo"></a>
    <div id="project-home"><a href="..">Project Home</a></div>
  </div>
+ 
 --- src/xxdiff.pro.orig	2019-06-27 08:14:43.000000000 -0700
 +++ src/xxdiff.pro	2019-06-27 08:48:54.000000000 -0700
 @@ -145,29 +145,13 @@
