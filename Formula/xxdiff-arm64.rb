@@ -4,7 +4,7 @@ class XxdiffArm64 < Formula
   url "https://downloads.sourceforge.net/project/xxdiff/xxdiff/4.0.1/xxdiff-4.0.1.tar.bz2"
   sha256 "bf58ddda9d7a887f4f5cae20070ed5f2e0d65f575af20860738c6e2742c3a000"
   license "BSD-2-Clause"
-  revision 1
+  revision 2
 
   conflicts_with "xxdiff-x86_64", because: "you need to select either xxdiff-x86_64 or xxdiff-arm64, not both"
   depends_on arch: :arm64
