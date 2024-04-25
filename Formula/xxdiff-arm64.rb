@@ -4,7 +4,7 @@ class XxdiffArm64 < Formula
   url "https://downloads.sourceforge.net/project/xxdiff/xxdiff/4.0.1/xxdiff-4.0.1.tar.bz2"
   sha256 "bf58ddda9d7a887f4f5cae20070ed5f2e0d65f575af20860738c6e2742c3a000"
   license "BSD-2-Clause"
-  revision 2
+  revision 3
 
   conflicts_with "xxdiff-x86_64", because: "you need to select either xxdiff-x86_64 or xxdiff-arm64, not both"
   depends_on arch: :arm64
@@ -2515,15 +2515,3 @@ diff -urb ./tools/index.html ./tools/index.html
       "If no files are specified on the command line, show a file dialog so that "
       "the user can select them. This option is ignored if any files are specified."
     },
-diff -urb ./src/Makefile.bootstrap ./src/Makefile.bootstrap
---- ./src/Makefile.bootstrap
-+++ ./src/Makefile.bootstrap
-@@ -14,7 +14,7 @@ all: Makefile
- OS := $(shell uname -s)
- ifeq ($(OS),Darwin)
-     # Default is an Xcode project, so force a makefile build
--    export QMAKESPEC=macx-clang
-+    export QMAKESPEC=macx-clang-arm64
- endif
-
- Makefile.qmake: $(MAKEDIR)/xxdiff.pro
